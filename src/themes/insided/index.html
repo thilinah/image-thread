@@ -1,0 +1,43 @@
+<div class="top-menu container">
+    <nav class="navbar navbar-default">
+        <div class="col-md-4 left"><span class="glyphicon glyphicon-home"></span> Posts: {{post_count}}</div>
+        <div class="col-md-4 center export-container"><a id="export_posts" target="_blank" href="{{app_url}}a/download_posts" type="button" class="btn btn-default">Export Data</a></div>
+        <div class="col-md-4 right view-count"><span class="glyphicon glyphicon-stats"></span> Views: {{view_count}}</div>
+    </nav>
+</div>
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="post_title" placeholder="Type Your Message">
+                </div>
+                <div class="form-group">
+                    <div id="progress" class="progress">
+                        <div class="progress-bar progress-bar-success"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <span class="btn btn-default fileinput-button">
+                        <i class="glyphicon glyphicon-upload"></i>
+                        <span>Select file</span>
+                        <input id="fileupload" type="file" name="fileupload">
+                    </span>
+
+                    <span class="btn btn-success post-button">
+                        <i class="glyphicon glyphicon-cloud"></i>
+                        <span>Submit</span>
+                    </span>
+
+                </div>
+            </form>
+            <div id="upload_error" style="display: none;">
+                <div class="alert alert-danger alert-dismissible fade in" role="alert"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button><span class="message"></span></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="container postContainer">
+
+</div>

@@ -1,0 +1,18 @@
+{
+  "name": "Image Thread Mini Project",
+  "description": "",
+  "type": "Web Application",
+  "require": {
+    "twig/twig": "1.23.*",
+    "adodb/adodb-php": "5.20.*",
+    "monolog/monolog": "1.19.0",
+    "noahbuscher/macaw": "dev-master"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Thilina Haantha",
+      "email": "thilina.hasantha@gmail.com"
+    }
+  ]
+}

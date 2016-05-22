@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="image-thread" default="build">
+    <!-- By default, we assume all tools to be on the $PATH -->
+    <property name="toolsdir" value=""/>
+    <property name="buildroot" value="."/>
+    <property name="origin" value="${buildroot}/src"/>
+    <property environment="env"/>
+    <property name="env.appname" value="image-thread"/>
+    <property name="env.version" value="dev"/>
+    <property name="destination" value="/Applications/XAMPP/xamppfiles/htdocs/image-thread"/>
+
+
+    <target name="build"
+            depends="clean,install"
+            description=""/>
+
+    <target name="clean"
+            unless="clean.done"
+            description="Cleanup build artifacts">
+        <delete dir="${destination}/api"/>
+        <delete dir="${destination}/bower_components"/>
+        <delete dir="${destination}/composer"/>
+        <delete dir="${destination}/model"/>
+        <delete dir="${destination}/scripts"/>
+        <delete dir="${destination}/themes"/>
+        <property name="clean.done" value="true"/>
+    </target>
+
+
+    <target name="lint" description="Perform syntax check of sourcecode files">
+        <apply executable="php" failonerror="true">
+            <arg value="-l" />
+
+            <fileset dir="${buildroot}/src">
+                <include name="**/*.php" />
+                <modified />
+            </fileset>
+
+            <fileset dir="${buildroot}/test">
+                <include name="**/*.php" />
+                <modified />
+            </fileset>
+        </apply>
+    </target>
+
+    <target name="install"
+            depends=""
+            description="">
+
+        <mkdir dir="${destination}"/>
+
+        <copy todir="${destination}">
+            <fileset dir="${origin}">
+                <include name="**/*"/>
+            </fileset>
+        </copy>
+
+    </target>
+
+
+
+</project>
+

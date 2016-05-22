@@ -1,0 +1,27 @@
+.top-menu{
+    margin-top: 10px;
+    font-size: 1.2em;
+    line-height: 2.8em;
+}
+
+.view-count{
+    text-align: right;
+}
+
+.export-container{
+    text-align: center;
+    margin-top: 5px;
+}
+
+.post-text{
+    font-size:1.1em;
+}
+
+.post-body{
+    text-align: center;
+}
+
+.post-image{
+    margin: 0 auto;
+    display: block;
+}
