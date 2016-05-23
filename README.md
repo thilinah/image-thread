@@ -18,17 +18,18 @@ A Simple Web Application for uploading and displaying images
  * If you are using apache change "image-thread" to your web folder name. If you are placing files in web root change it to "/"
  * If you are using nginx make sure to add following location element in your vhost
    
-       <code>
-               location / {
-                try_files $uri $uri/ /index.php?/$uri;
-               }
-       </code>
+  
+           location / {
+            try_files $uri $uri/ /index.php?/$uri;
+           }
+
        
  * if the app placed in a sub folder under nginx use 
  
-        <code>
+
             location /subdir/ {
                	try_files $uri $uri/ /subdir/index.php?/$uri;
-               }
-       </code>
-    
+            }
+  
+ * Create a DB and create the tables using script/db_structure.sql
+ * Update config.inc.php and config.live.inc.php appropriately with DB connection details and application url
